@@ -1,0 +1,9 @@
+*
+!.devcontainer
+!.devcontainer/**
+!.dockerignore
+!.gitignore
+!Dockerfile
+!sampling.sh
+!video_sampling.sh
+!README.md
