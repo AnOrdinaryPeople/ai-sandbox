@@ -1,6 +1,6 @@
 # AI Sandbox
 
-Simple sandbox setup with dev container for experimenting with various open source pre-trained models. The Docker image itself using `nvidia/cuda:11.8.0-cudnn8-devel-ubuntu20.04` including python 3.10 and some machine learning modules. The image is quite large, around 19GB. However, it should be reasonable considering the inclusion of GPU support and some machine learning modules.
+Simple sandbox setup with dev container for experimenting with various open source pre-trained models. The Docker image itself using `nvidia/cuda:11.8.0-cudnn8-devel-ubuntu20.04` including python 3.10, additional package development, and some machine learning modules. The image is quite large, around 19.5GB. However, it should be reasonable considering the inclusion of GPU support and some machine learning modules.
 
 ## Setup
 

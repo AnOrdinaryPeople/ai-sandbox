@@ -10,7 +10,8 @@ RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.d
 # zlib1g-dev is required for install the python
 # libssl-dev is required for install the pip
 # libffi-dev is required for install the generative-models
-RUN apt-get update && apt-get install -y curl git git-lfs zlib1g-dev libssl-dev libffi-dev
+# libbz2-dev and liblzma-dev are required for install torchvision
+RUN apt-get update && apt-get install -y curl git git-lfs zlib1g-dev libssl-dev libffi-dev libbz2-dev liblzma-dev
 RUN git lfs install
 
 RUN curl -O https://www.python.org/ftp/python/3.10.0/Python-3.10.0.tar.xz \
@@ -43,4 +44,11 @@ RUN pip install setuptools --upgrade \
   && hatch build -t wheel
 
 # Playground pretrained model from Hugging Face
-RUN pip install opencv-python-headless diffusers["torch"] transformers --upgrade
+RUN pip install opencv-python-headless \
+  diffusers["torch"] \
+  transformers \
+  imageio==2.27.0 \
+  decord==0.6.0 \
+  gdown \
+  gradio \
+  --upgrade
