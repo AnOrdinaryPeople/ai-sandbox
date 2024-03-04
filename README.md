@@ -1,24 +1,30 @@
 # AI Sandbox
 
-Simple sandbox setup with dev container for experimenting with various open source pre-trained models. The Docker image itself using `nvidia/cuda:11.8.0-cudnn8-devel-ubuntu20.04` including python 3.10, additional package development, and some machine learning modules. The image is quite large, around 19.5GB. However, it should be reasonable considering the inclusion of GPU support and some machine learning modules.
+A straightforward sandbox setup is created using a devcontainer to experiment with various open-source pretrained models. The Docker image utilizes `nvidia/cuda:11.8.0-cudnn8-devel-ubuntu20.04`, incorporating Python 3.10, additional development packages, and several machine learning modules. While the image is quite large, at around 19.5GB, the inclusion of GPU support and variety of machine learning modules justifies the size.
 
 ## Setup
 
-1. Clone generative models for base sandbox
+1. **Clone generative models for base sandbox:**
 
    ```bash
    $ git clone https://github.com/Stability-AI/generative-models.git
    ```
 
-1. Download a pretrained model if necessary and place it in `/generative-models/checkpoints`. For example, [SDXL-base-1.0](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0)
+1. **(Optional) Download a pretrained model:**
 
-1. Install [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension in VSCode
+   If needed, download a pretrained model and place it in the `/generative-models/checkpoints` directory. For example, [SDXL-base-1.0](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0) model.
 
-1. Open command palette and select `Dev Containers: Rebuild and Reopen in Container`
+1. **Install Dev Containers extension:**
+
+   Install [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension from VSCode marketplace.
+
+1. **Open the development container:**
+
+   Open the command palette and select the option `Dev Containers: Rebuild and Reopen in Container`.
 
 ## Usage Examples
 
-Explore various use cases within the AI Sandbox dev container by following these examples:
+Explore various use cases within the AI Sandbox devcontainer by following these examples:
 
 - **Run a simple demo**
 
@@ -36,6 +42,6 @@ Explore various use cases within the AI Sandbox dev container by following these
 
   Explore and clone additional pretrained model repositories into the AI Sandbox for a broader range of experiments.
 
-- **Directly create a Python file with [diffusers](https://huggingface.co/docs/diffusers/index)**
+- **Directly create a Python file with [Diffusers](https://huggingface.co/docs/diffusers/index)**
 
-  Create a Python file in the AI Sandbox, incorporating the power of [diffusers](https://huggingface.co/docs/diffusers/index) for advanced machine learning tasks.
+  Create a Python file in the AI Sandbox, incorporating the power of [Diffusers](https://huggingface.co/docs/diffusers/index) for advanced machine learning tasks.
