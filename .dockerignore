@@ -1,5 +1,1 @@
-# /generative-models/checkpoints
-/generative-models/dist
-/generative-models/outputs
-/generative-models/build
-/generative-models/src
+models
