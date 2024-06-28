@@ -1,18 +1,8 @@
 # AI Sandbox
 
-A straightforward sandbox setup is created using a devcontainer to experiment with various open-source pretrained models. The Docker image utilizes `nvidia/cuda:11.8.0-cudnn8-devel-ubuntu20.04`, incorporating Python 3.10, additional development packages, and several machine learning modules. While the image is quite large, at around 19.5GB, the inclusion of GPU support and variety of machine learning modules justifies the size.
+A straightforward sandbox setup using Dev Containers for experimenting with various pretrained models. Built on `nvidia/cuda:11.8.0-cudnn8-devel-ubuntu20.04`, including Python 3.10 and some AI libraries. While the image size is quite large, approximately 18.89GB, the inclusion of GPU support and a variety of AI libraries justifies the size.
 
 ## Setup
-
-1. **Clone generative models for base sandbox:**
-
-   ```bash
-   $ git clone https://github.com/Stability-AI/generative-models.git
-   ```
-
-1. **(Optional) Download a pretrained model:**
-
-   If needed, download a pretrained model and place it in the `/generative-models/checkpoints` directory. For example, [SDXL-base-1.0](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0) model.
 
 1. **Install Dev Containers extension:**
 
@@ -24,24 +14,29 @@ A straightforward sandbox setup is created using a devcontainer to experiment wi
 
 ## Usage Examples
 
-Explore various use cases within the AI Sandbox devcontainer by following these examples:
+Explore various use cases within the AI Sandbox devcontainer using these examples:
 
 - **Run a simple demo**
 
   ```bash
-  $ ./sampling.sh
+  # Assuming inside the "app" directory
+  $ python /example/main.py
   ```
 
-  Execute the `sampling.sh` script to launch Streamlit inside the `generative-models` repository for a quick and simple demonstration.
+  This command executes the `main.py` script located in the `/example` directory for a basic demonstration.
 
 - **Clone pretrained model repositories**
 
   ```bash
-  $ git clone https://github.com/your-username/pretrained-model-repo.git
+  $ git clone https://github.com/example/pretrained-model-repo.git
   ```
 
-  Explore and clone additional pretrained model repositories into the AI Sandbox for a broader range of experiments.
+  Clone additional pretrained model repositories into the AI Sandbox to expand experimental scope. Git LFS is pre-installed in the Dockerfile for managing large model files effectively.
 
-- **Directly create a Python file with [Diffusers](https://huggingface.co/docs/diffusers/index)**
+- **Download pretrained models**
 
-  Create a Python file in the AI Sandbox, incorporating the power of [Diffusers](https://huggingface.co/docs/diffusers/index) for advanced machine learning tasks.
+  Models can be downloaded and utilized directly in the AI Sandbox. For example, the [Animagine XL 3.1](https://huggingface.co/cagliostrolab/animagine-xl-3.1) safetensors file can be manually downloaded and placed in the `models` directory, which is mounted via `devcontainer.json`.
+
+- **Create a Python file with Diffusers**
+
+  Develop Python scripts within the AI Sandbox to leverage the advanced capabilities of [Diffusers](https://huggingface.co/docs/diffusers/index) for complex AI tasks.
