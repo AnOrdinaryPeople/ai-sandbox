@@ -4,6 +4,7 @@
 !.dockerignore
 !.gitignore
 !Dockerfile
-!sampling.sh
-!video_sampling.sh
 !README.md
+!example
+!example/**
+!models
