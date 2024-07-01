@@ -1,6 +1,6 @@
 # AI Sandbox
 
-A straightforward sandbox setup using Dev Containers for experimenting with various pretrained models. Built on `nvidia/cuda:11.8.0-cudnn8-devel-ubuntu20.04`, including Python 3.10 and some AI libraries. While the image size is quite large, approximately 18.89GB, the inclusion of GPU support and a variety of AI libraries justifies the size.
+A straightforward sandbox setup using Dev Containers for experimenting with various pretrained models. Built on `pytorch/pytorch:2.3.1-cuda11.8-cudnn8-devel`, including Python 3.10 and some AI libraries. While the image size is quite large, approximately 18.08GB, the inclusion of GPU support, development tools, and a variety of AI libraries justifies the size.
 
 ## Setup
 
