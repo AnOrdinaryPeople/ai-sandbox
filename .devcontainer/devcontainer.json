@@ -17,7 +17,7 @@
   "features": {
     "ghcr.io/devcontainers/features/github-cli": {}
   },
-  "runArgs": ["--gpus=all"],
+  "runArgs": ["--gpus=all", "--ipc=host"],
   "mounts": [
     "source=${localWorkspaceFolder}/models,target=/app/models,type=bind,consistency=cached"
   ]
