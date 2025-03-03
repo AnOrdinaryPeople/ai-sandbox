@@ -1,6 +1,6 @@
 # AI Sandbox
 
-A simple sandbox environment using Dev Containers for experimenting with pretrained models. It is based on the `pytorch` image and allows version customization for PyTorch, CUDA, cuDNN, and container type (runtime or development). The image size is large, around 18.08GB for the development container, but this is justified by the inclusion of GPU support, development tools, and various AI libraries.
+A simple sandbox environment using Dev Containers for experimenting with pretrained models. It is based on the `pytorch` image and allows version customization for PyTorch, CUDA, cuDNN, and container type (runtime or development). The image size is large, around 21.2GB for the development container, but this is justified by the inclusion of GPU support, development tools, and various AI libraries.
 
 ## Setup
 
@@ -24,24 +24,24 @@ A simple sandbox environment using Dev Containers for experimenting with pretrai
 
 ## Usage Examples
 
-Explore various use cases within the AI Sandbox devcontainer using these examples:
+Explore various use cases within the AI Sandbox devcontainer using these examples. All scripts and projects should be placed inside the `src` directory, which is mounted in the devcontainer for seamless access.
 
 - **Run a simple demo**
 
   ```bash
-  # Assuming inside the "app" directory
-  $ python /example/main.py
+  python /src/example.py
   ```
 
-  This command executes the `main.py` script located in the `/example` directory for a basic demonstration.
+  This command executes the `example.py` script located in the `/src` directory for a basic demonstration.
 
 - **Clone pretrained model repositories**
 
   ```bash
-  $ git clone https://github.com/example/pretrained-model-repo.git
+  cd src
+  git clone https://github.com/example/pretrained-model-repo.git
   ```
 
-  Clone additional pretrained model repositories into the AI Sandbox to expand experimental scope. Git LFS is pre-installed in the Dockerfile for managing large model files effectively.
+  Store repositories inside `src` to keep the projects organized. Git LFS is pre-installed in the Dockerfile for managing large model files effectively.
 
 - **Download pretrained models**
 
@@ -49,4 +49,4 @@ Explore various use cases within the AI Sandbox devcontainer using these example
 
 - **Create a Python file with Diffusers**
 
-  Develop Python scripts within the AI Sandbox to leverage the advanced capabilities of [Diffusers](https://huggingface.co/docs/diffusers/index) for complex AI tasks.
+  Develop Python scripts inside `src` directory, see [Diffusers](https://huggingface.co/docs/diffusers/index) for references.
