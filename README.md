@@ -12,6 +12,16 @@ A simple sandbox environment using Dev Containers for experimenting with pretrai
 
    Open the command palette and select the option `Dev Containers: Rebuild and Reopen in Container`.
 
+1. **Adjust shared memory for large models (if needed):**
+
+   When working with very large pretrained AI models, increasing the shared memory allocation may be necessary to prevent crashes. This can be done by modifying `--shm-size` argument at `devcontainer.json`, for example:
+
+   ```json
+   "runArgs": ["--gpus=all", "--ipc=host", "--shm-size=16gb"]
+   ```
+
+   The `16gb` value can be adjusted based on the model's memory requirements.
+
 ## Usage Examples
 
 Explore various use cases within the AI Sandbox devcontainer using these examples:

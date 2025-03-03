@@ -10,15 +10,18 @@
         "eamodio.gitlens"
       ],
       "settings": {
-        "python.pythonPath": "/usr/bin/python"
+        "python.pythonPath": "/opt/conda/bin/python"
       }
     }
   },
   "features": {
     "ghcr.io/devcontainers/features/github-cli": {}
   },
-  "runArgs": ["--gpus=all", "--ipc=host"],
+  "runArgs": ["--gpus=all", "--ipc=host", "--shm-size=8gb"],
   "mounts": [
+    "type=tmpfs,destination=/dev/shm",
+    "source=${localWorkspaceFolder}/.mount/pip,target=/root/.cache/pip,type=bind",
+    "source=${localWorkspaceFolder}/.mount/huggingface,target=/root/.cache/huggingface,type=bind",
     "source=${localWorkspaceFolder}/models,target=/app/models,type=bind,consistency=cached"
   ]
 }
