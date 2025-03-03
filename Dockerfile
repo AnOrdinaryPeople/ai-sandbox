@@ -14,7 +14,8 @@ ARG CUDNN_VERSION=9
 
 # Specify the type of PyTorch container.
 # Options: "runtime" (lightweight, for inference) or "devel" (includes compilers, for development).
-# Choose "devel" if you need to compile custom CUDA extensions.
+# Choose "devel" if you need to compile custom CUDA extensions or use tools like "nvcc,"
+# which some AI libraries require for CUDA-related operations.
 ARG CONTAINER_TYPE=runtime
 
 FROM pytorch/pytorch:${PYTORCH_VERSION}-cuda${CUDA_VERSION}-cudnn${CUDNN_VERSION}-${CONTAINER_TYPE}
