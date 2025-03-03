@@ -1,6 +1,6 @@
 # AI Sandbox
 
-A straightforward sandbox setup using Dev Containers for experimenting with various pretrained models. Built on `pytorch/pytorch:2.3.1-cuda11.8-cudnn8-devel`, including Python 3.10 and some AI libraries. While the image size is quite large, approximately 18.08GB, the inclusion of GPU support, development tools, and a variety of AI libraries justifies the size.
+A simple sandbox environment using Dev Containers for experimenting with pretrained models. It is based on the `pytorch` image and allows version customization for PyTorch, CUDA, cuDNN, and container type (runtime or development). The image size is large, around 18.08GB for the development container, but this is justified by the inclusion of GPU support, development tools, and various AI libraries.
 
 ## Setup
 
@@ -35,7 +35,7 @@ Explore various use cases within the AI Sandbox devcontainer using these example
 
 - **Download pretrained models**
 
-  Models can be downloaded and utilized directly in the AI Sandbox. For example, the [Animagine XL 3.1](https://huggingface.co/cagliostrolab/animagine-xl-3.1) safetensors file can be manually downloaded and placed in the `models` directory, which is mounted via `devcontainer.json`.
+  Models can be downloaded and utilized directly in the AI Sandbox. For example, the [DeepSeek-R1](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B) safetensors file can be manually downloaded and placed in the `models` directory, which is mounted via `devcontainer.json`.
 
 - **Create a Python file with Diffusers**
 
