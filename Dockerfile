@@ -27,10 +27,6 @@ RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.d
 RUN apt-get update && apt-get install -y git git-lfs
 RUN git lfs install
 
-WORKDIR /app
-
-COPY . .
-
 RUN pip install diffusers["torch"] transformers compel --upgrade
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*

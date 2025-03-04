@@ -22,6 +22,7 @@
     "type=tmpfs,destination=/dev/shm",
     "source=${localWorkspaceFolder}/.mount/pip,target=/root/.cache/pip,type=bind",
     "source=${localWorkspaceFolder}/.mount/huggingface,target=/root/.cache/huggingface,type=bind",
+    "source=${localWorkspaceFolder}/src,target=/app/src,type=bind,consistency=cached",
     "source=${localWorkspaceFolder}/models,target=/app/models,type=bind,consistency=cached"
   ]
 }
